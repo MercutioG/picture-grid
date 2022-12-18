@@ -1,0 +1,374 @@
+p2 {
+    font-size: 30px;
+}
+
+@media screen and (min-width: 401px) {
+
+    /* Basic Layout */
+    * {
+        padding: 0px;
+    }
+
+    html {
+        background-color: gray;
+    }
+
+    body>div {
+        background-color: white;
+        padding: 20px;
+    }
+
+    header {
+        background-color: #b0a0a0;
+        padding: 0.1rem 3rem 0.1rem 3rem;
+    }
+
+    /* Header Content */
+    #headerText {
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .invisButton {
+        padding: 2px;
+        border: hidden;
+        padding-right: 1rem;
+        background-color: #b0a0a0;
+    }
+
+    .invisButton:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        color: rgb(111, 0, 255);
+    }
+
+    p2{
+        visibility: hidden;
+    }
+
+    /* Grid Area */
+    #gridArea {
+        padding-bottom: 10px;
+        display: grid;
+        width: auto;
+        height: auto;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas:
+            "img1 img1 img1 img1 img2"
+            "img1 img1 img1 img1 img3"
+            "img1 img1 img1 img1 img4"
+            "img5 img5 img6 img7 img8"
+            "img9 img10 img10 img11 img12"
+            "img9 img14 img15 img15 img16"
+            "img13 img14 img17 img18 img19"
+            "img20 img21 img21 . info";
+        gap: 10px;
+    }
+
+    .item-a {
+        grid-area: img1;
+    }
+
+    .item-b {
+        grid-area: img2;
+    }
+
+    .item-c {
+        grid-area: img3;
+    }
+
+    .item-d {
+        grid-area: img4;
+    }
+
+    .item-e {
+        grid-area: img5;
+    }
+
+    .item-f {
+        grid-area: img6;
+    }
+
+    .item-g {
+        grid-area: img7;
+    }
+
+    .item-h {
+        grid-area: img8;
+    }
+
+    .item-i {
+        grid-area: img9;
+    }
+
+    .item-j {
+        grid-area: img10;
+    }
+
+    .item-k {
+        grid-area: img11;
+    }
+
+    .item-l {
+        grid-area: img12;
+    }
+
+    .item-m {
+        grid-area: img13;
+        align-self: end;
+    }
+
+    .item-n {
+        grid-area: img14;
+    }
+
+    .item-o {
+        grid-area: img15;
+    }
+
+    .item-p {
+        grid-area: img16;
+    }
+
+    .item-q {
+        grid-area: img17;
+    }
+
+    .item-r {
+        grid-area: img18;
+    }
+
+    .item-s {
+        grid-area: img19;
+    }
+
+    .item-t {
+        grid-area: img20;
+    }
+
+    .item-u {
+        grid-area: img21;
+    }
+
+    .item-v {
+        grid-area: info;
+        align-self: end;
+
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    /* Extra */
+    .item-v p {
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+
+        text-align: end;
+        color: orangered;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+    #gridArea {
+            padding-bottom: 10px;
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-template-columns: repeat(6, auto);
+            grid-template-rows: repeat(10, auto);
+            gap: 0.5rem;
+            align-content: center;
+            }
+
+        .item-a {
+            grid-area: img1;
+            grid-row: 2/3;
+            grid-column: 1/6;
+
+            align-self: center;
+            justify-self: stretch;
+        }
+    
+        .item-b {
+            grid-area: img2;
+            grid-row: 3/4;
+            grid-column: 1/2;
+
+        }
+    
+        .item-c {
+            grid-area: img3;
+            grid-row: 4/5;
+            grid-column: 1/2;
+        }
+    
+        .item-d {
+            grid-area: img4;
+
+            grid-row: 3/5;
+            grid-column: 5/6;
+        }
+    
+        .item-e {
+            grid-area: img5;
+
+            grid-row: 5/6;
+            grid-column: 1/3;
+        }
+    
+        .item-f {
+            grid-area: img6;
+
+            grid-row: 5/6;
+            grid-column: 3/4
+            ;
+        }
+    
+        .item-g {
+            grid-area: img7;
+
+            grid-row: 5/6;
+            grid-column: 4/5;
+        }
+    
+        .item-h {
+            grid-area: img8;
+
+            grid-row: 5/6;
+            grid-column: 5/6;
+        }
+    
+        .item-i {
+            grid-area: img9;
+
+            grid-row: 6/8;
+            grid-column: 1/2;
+        }
+    
+        .item-j {
+            grid-area: img10;
+
+            grid-row: 6/7;
+            grid-column: 2/4;
+        }
+    
+        .item-k {
+            grid-area: img11;
+
+            grid-row: 6/7;
+            grid-column: 4/5;
+        }
+    
+        .item-l {
+            grid-area: img12;
+
+            grid-row: 6/7;
+            grid-column: 5/6;
+        }
+    
+        .item-m {
+            grid-area: img13;
+            align-self: center;
+
+            grid-row: 8/9;
+            grid-column: 1/2;
+        }
+    
+        .item-n {
+            grid-area: img14;
+            
+            grid-row: 7/9;
+            grid-column: 2/3;
+        }
+    
+        .item-o {
+            grid-area: img15;
+
+            grid-row: 7/8;
+            grid-column: 3/5;
+        }
+    
+        .item-p {
+            grid-area: img16;
+
+            grid-row: 7/8;
+            grid-column: 5/6;
+        }
+    
+        .item-q {
+            grid-area: img17;
+
+            grid-row: 8/9;
+            grid-column: 3/4;
+        }
+    
+        .item-r {
+            grid-area: img18;
+
+            grid-row: 8/9;
+            grid-column: 4/5;
+        }
+    
+        .item-s {
+            grid-area: img19;
+
+            grid-row: 8/9;
+            grid-column: 5/6;
+        }
+    
+        .item-t {
+            grid-area: img20;
+
+            grid-row: 3/5;
+            grid-column: 2/3;
+        }
+    
+        .item-u {
+            grid-area: img21;
+
+            grid-row: 3/5;
+            grid-column: 3/5;
+        }
+
+        .item-v {
+            grid-area: img22;
+
+            grid-row: 9/10;
+            grid-column: 1/6;
+
+            background-color: #b0a0a0;
+        }
+
+        header {
+            background-color: #b0a0a0;
+            padding: 0.1rem 3rem 0.1rem 3rem;
+            text-align: center;
+            grid-row: 1/2;
+            grid-column: 1/6;
+        }
+
+        .invisButton {
+            font-size: 2rem;
+            padding: 2px;
+            border: hidden;
+            padding-right: 1rem;
+            background-color: #b0a0a0;
+        }
+
+        .invisButton:hover {
+            text-decoration: underline;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+
+        p1{
+            visibility: hidden;
+        }
+}
